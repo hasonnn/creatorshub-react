@@ -42,6 +42,9 @@ const NavBar = ({ currentUser, onSignOut }) => {
                         <Nav className="me-auto">
                             {currentUser ? (
                                 <React.Fragment>
+                                    {currentUser.is_admin? (
+                                        <Nav.Link href='/admin'>Admin Panel</Nav.Link>
+                                    ) : ""}
                                     <Nav.Link eventKey="disabled" disabled>
                                         <span className="nav-welcome">Welcome, {currentUser.full_name}!</span>
                                     </Nav.Link> 

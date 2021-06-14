@@ -7,8 +7,8 @@ const HeroImage = () => {
                 <div className="row">
                     <div className="col col-sm-12 col-md-5">
                         <div className="pt-4 mt-4">
-                            <h1 className="hero-image-page">Welcome to CreatorsHub</h1>
-                            <p className="hero-image-page">It's never too late to learn!</p>
+                            <h1 className="hero-image-page">Welcome to CreatorsHub</h1> <br/>
+                            <h5 className="hero-image-page">It's never too late to learn something new!</h5>
                         </div>
                     </div>
                     <div className="col col-sm-12 col-md-7">

@@ -4,8 +4,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { User } from './requests'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import AdminPanel from './components/AdminPanel'
 import CourseIndexPage from './components/CourseIndexPage'
 import CourseShowPage from './components/CourseShowPage'
+import CourseNewPage from './components/CourseNewPage'
 import EpisodeShowPage from './components/EpisodeShowPage'
 import SignInPage from './components/SignInPage'
 import SignUpPage from './components/SignUpPage'
@@ -50,6 +52,9 @@ class App extends Component {
             <Route exact path='/sign_up' render={(routeProps) => <SignUpPage {...routeProps} onSignUp={this.getCurrentUser} />}  />
 
             <Route path="/" exact component={Home} />
+            <Route path="/admin" exact component={AdminPanel}/>
+
+            <Route exact path="/courses/new" component={CourseNewPage} />
 
             {/* <Route path="/courses/:id" component={CourseShowPage}/> */}
             <AuthRoute isAuthenticated={!!this.state.user} exact path="/courses/:id" component={CourseShowPage} />
@@ -68,3 +73,4 @@ class App extends Component {
 }
 
 export default App;
+

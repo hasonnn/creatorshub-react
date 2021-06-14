@@ -129,9 +129,14 @@ div.course-episodes {
   padding-bottom: 45px;
 }
 
-div.footer {
+div.orange-bar {
   background-color: #d74234;
   padding: 20px 0;
+}
+
+div.course-container {
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 /* COURSE SHOW PAGE */
@@ -158,4 +163,18 @@ div.eps-video {
 div.review-container {
   overflow-y: scroll;
   height: 60vh;
+}
+
+/* ADMIN PANEL */
+
+section.admin {
+  background-color: #d74234;
+  min-height: 550px;
+  height: 100vh;
+  padding: 150px 0;
+  color: #fff;
+}
+
+div.admin-text {
+  color: black;
 }

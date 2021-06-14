@@ -11,32 +11,32 @@ export const Course = {
     return fetch(`${BASE_URL}/courses/${id}`)
       .then(res => res.json())
   },
-  // create(params){
-  //   return fetch(`${BASE_URL}/courses`, {
-  //       method: 'POST',
-  //       credentials: 'include', 
-  //       headers: {
-  //           'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(params)
-  //   }).then((res) => res.json());
-  // },
-  // update(id, params) {
-  //   return fetch(`${BASE_URL}/courses/${id}`, {
-  //     method: 'PATCH',
-  //     credentials: 'include',
-  //     headers: {
-  //       "Content-Type": 'application/json'
-  //     },
-  //     body: JSON.stringify(params)
-  //   }).then(res => res.json())
-  // },
-  // destroy(id) {
-  //   return fetch(`${BASE_URL}/courses/${id}`, {
-  //     method: 'DELETE',
-  //     credentials: 'include',
-  //   })
-  // },
+  create(params){
+    return fetch(`${BASE_URL}/courses`, {
+        method: 'POST',
+        credentials: 'include', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(params)
+    }).then((res) => res.json());
+  },
+  update(id, params) {
+    return fetch(`${BASE_URL}/courses/${id}`, {
+      method: 'PATCH',
+      credentials: 'include',
+      headers: {
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify(params)
+    }).then(res => res.json())
+  },
+  destroy(id) {
+    return fetch(`${BASE_URL}/courses/${id}`, {
+      method: 'DELETE',
+      credentials: 'include',
+    })
+  },
 }
 
 export const Episode = {

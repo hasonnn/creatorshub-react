@@ -8,7 +8,7 @@ class CourseIndexPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            courses: []
+            courses: [],
         }
     }
 
@@ -46,37 +46,41 @@ class CourseIndexPage extends Component {
                                     <div>
                                         <img
                                             src="/course-img.png"
-                                            width="590"
-                                            height="1000"
+                                            width="575"
+                                            height="950"
                                             className="d-inline-block align-top"
                                             alt="course images"
                                         />
                                     </div>
                                 </div>
                             </div>
-                            <div className="col col-sm-12 col-md-6">
-                                {this.state.courses.map(({ id, title, description }) => (
-                                <div className="course-episodes">
-                                    <Card>
-                                        <Card.Header>Course {id} <h4>{title}</h4></Card.Header>
-                                        <Card.Body>
-                                            <Card.Text>
-                                                {description}
-                                            </Card.Text>
-                                            <div className="text-center pt-4 pb-4">
-                                                <div className="cta-button">
-                                                    <Link style={{ textDecoration: 'none', color: 'red' }} to={`/courses/${id}`}>See Full Course</Link>
+                            <div className="col col-sm-12 col-md-6 pt-5">
+                                <h3>Scroll Through Our Different Courses:</h3>
+                                <hr/> <br/>
+                                <div className="row course-container">
+                                    {this.state.courses.map(({ id, title, description }) => (
+                                    <div className="course-episodes">
+                                        <Card>
+                                            <Card.Header>Course {id} <h4>{title}</h4></Card.Header>
+                                            <Card.Body>
+                                                <Card.Text>
+                                                    {description}
+                                                </Card.Text>
+                                                <div className="text-center pt-4 pb-4">
+                                                    <div className="cta-button">
+                                                        <Link style={{ textDecoration: 'none', color: 'red' }} to={`/courses/${id}`}>See Full Course</Link>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
+                                            </Card.Body>
+                                        </Card>
+                                    </div>
+                                    ))} 
                                 </div>
-                                ))} 
                             </div>
                         </div>
                     </div>
                 </section>
-                <div className="footer"></div>
+                <div className="orange-bar"></div>
             </div>
         )
     }

@@ -41,7 +41,7 @@ class EpisodeShowPage extends Component {
         const { id, title, description, url, reviews } = this.state.episode
         return (
             <div>
-                <div className="footer"></div>
+                <div className="orange-bar"></div>
                 <section className="course-section">
                     <div className="container">
                         <div className="row">
@@ -70,8 +70,10 @@ class EpisodeShowPage extends Component {
                                                 key = {i}
                                                 id = {r.id}
                                                 body = {r.body}
-                                                created_at = {r.created_at}
+                                                user = {r.user}
+                                                created_at = {r.created_at.toLocaleString()}
                                                 deleteReview = {this.deleteReview}
+                                                currentUser = {this.currentUser}
                                                 />
                                             }) : ""}
                                         </div>
@@ -81,7 +83,7 @@ class EpisodeShowPage extends Component {
                         </div>
                     </div>
                 </section>
-                <div className="footer"></div>
+                <div className="orange-bar"></div>
             </div>
         )
     }
