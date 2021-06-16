@@ -21,45 +21,45 @@ export const Course = {
         body: JSON.stringify(params)
     }).then((res) => res.json());
   },
-  update(id, params) {
-    return fetch(`${BASE_URL}/courses/${id}`, {
-      method: 'PATCH',
-      credentials: 'include',
-      headers: {
-        "Content-Type": 'application/json'
-      },
-      body: JSON.stringify(params)
-    }).then(res => res.json())
-  },
-  destroy(id) {
-    return fetch(`${BASE_URL}/courses/${id}`, {
-      method: 'DELETE',
-      credentials: 'include',
-    })
-  },
+  // update(id, params) {
+  //   return fetch(`${BASE_URL}/courses/${id}`, {
+  //     method: 'PATCH',
+  //     credentials: 'include',
+  //     headers: {
+  //       "Content-Type": 'application/json'
+  //     },
+  //     body: JSON.stringify(params)
+  //   }).then(res => res.json())
+  // },
+  // destroy(id) {
+  //   return fetch(`${BASE_URL}/courses/${id}`, {
+  //     method: 'DELETE',
+  //     credentials: 'include',
+  //   })
+  // },
 }
 
 export const Episode = {
-  // index(id) {
-  //     return fetch(`${BASE_URL}/courses/${id}/episodes`)
-  //     .then(res => {
-  //         return res.json();
-  //     })
-  // },
+  index(id) {
+      return fetch(`${BASE_URL}/courses/${id}/episodes`)
+      .then(res => {
+          return res.json();
+      })
+  },
   show(id) {
       return fetch(`${BASE_URL}/episodes/${id}`)
         .then(res => res.json())
   },
-  // create(id, params){
-  //   return fetch(`${BASE_URL}/courses/${id}/episodes`, {
-  //       method: 'POST',
-  //       credentials: 'include', 
-  //       headers: {
-  //           'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(params)
-  //   }).then((res) => res.json());
-  // },
+  create(id, params){
+    return fetch(`${BASE_URL}/courses/${id}/episodes`, {
+        method: 'POST',
+        credentials: 'include', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(params)
+    }).then((res) => res.json());
+  },
   // update(id, params) {
   //   return fetch(`${BASE_URL}/episodes/${id}`, {
   //     method: 'PATCH',

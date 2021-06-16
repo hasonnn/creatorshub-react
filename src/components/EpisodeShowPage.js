@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Episode } from '../requests' 
+import { Episode, Review } from '../requests' 
 import ReviewForm from './ReviewForm'
 import ReviewDetails from './ReviewDetail'
 
@@ -25,14 +25,20 @@ class EpisodeShowPage extends Component {
     } 
 
     deleteReview(id) {
-        this.setState((state) => {
-            return {
-                episode: {
-                    ...state.episode,
-                    reviews: state.episode.reviews.filter((r) => {
-                        return r.id !== id
-                    })
-                }
+        Review.destroy(id)
+        .then(res => {
+            console.log(res)
+            if (res["remove"]) {
+                this.setState((state) => {
+                    return {
+                        episode: {
+                            ...state.episode,
+                            reviews: state.episode.reviews.filter((r) => {
+                                return r.id !== id
+                            })
+                        }
+                    }
+                })
             }
         })
     }  

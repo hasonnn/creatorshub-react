@@ -178,3 +178,8 @@ section.admin {
 div.admin-text {
   color: black;
 }
+
+div.episode-container {
+  overflow-y: scroll;
+  height: 60vh;
+}

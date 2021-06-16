@@ -10,7 +10,9 @@ const AdminPanel = () => {
                         <div className="pt-4 mt-4">
                             <div className="card">
                                 <div className="card-body p-4">
-                                    <NavLink className="btn btn-primary btn-lg btn-block" to='/courses/new'>Create New Course</NavLink>
+                                    <NavLink className="btn btn-danger btn-lg btn-block" to='/course/new'>Create New Course</NavLink> 
+                                    <hr/>
+                                    <NavLink className="btn btn-danger btn-lg btn-block" to='/episode/new'>Create New Episode</NavLink>
                                 </div>
                             </div>
                         </div>

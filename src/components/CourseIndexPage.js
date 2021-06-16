@@ -15,7 +15,7 @@ class CourseIndexPage extends Component {
     componentDidMount() {
         Course.index()
         .then((courses) => {
-          this.setState((state) => {
+          this.setState(() => {
             return {
               courses: courses
             }

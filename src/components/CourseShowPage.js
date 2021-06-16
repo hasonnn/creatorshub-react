@@ -13,7 +13,7 @@ class CourseShowPage extends Component {
     componentDidMount() {
         Course.show(this.props.match.params.id)
         .then((episodes) => {
-          this.setState((state) => {
+          this.setState(() => {
             return {
               episodes: episodes
             }

@@ -9,6 +9,7 @@ import CourseIndexPage from './components/CourseIndexPage'
 import CourseShowPage from './components/CourseShowPage'
 import CourseNewPage from './components/CourseNewPage'
 import EpisodeShowPage from './components/EpisodeShowPage'
+import EpisodeNewPage from './components/EpisodeNewPage'
 import SignInPage from './components/SignInPage'
 import SignUpPage from './components/SignUpPage'
 import AuthRoute from './components/AuthRoute'
@@ -54,7 +55,8 @@ class App extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/admin" exact component={AdminPanel}/>
 
-            <Route exact path="/courses/new" component={CourseNewPage} />
+            <Route exact path="/course/new" component={CourseNewPage} />
+            <Route exact path="/episode/new" component={EpisodeNewPage} />
 
             {/* <Route path="/courses/:id" component={CourseShowPage}/> */}
             <AuthRoute isAuthenticated={!!this.state.user} exact path="/courses/:id" component={CourseShowPage} />
